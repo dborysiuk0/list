@@ -27,8 +27,8 @@ public:
             new_var -> next -> value = data;
         } 
         else{
-          // head -> next = new Node<T>;
-           head -> value = data;
+           head -> next = new Node<T>;
+           head -> next -> value = data;
         }
         
     }
@@ -44,7 +44,7 @@ public:
 
 int main(void){
 
-    LinkedList<int> list;
+    LinkedList<int> list(10);
     list.push_back(20);
     list.push_back(21);
     list.push_back(21);
