@@ -11,8 +11,7 @@ class LinkedList{
 public:
     Node<T> *head;
     LinkedList(){
-       // head = 0;
-        head -> next = new Node<T>;
+        head = 0;
     }
     LinkedList(T data){
         head -> value = data;
@@ -38,8 +37,8 @@ public:
     void print(){
         Node<T> *new_var = head;
         while( new_var != 0 && new_var -> next != 0 ){
-            new_var = new_var -> next;
             std::cout << new_var -> value << std::endl;
+            new_var = new_var -> next;
         }
     }
 };
