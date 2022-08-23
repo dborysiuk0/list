@@ -11,7 +11,7 @@ class LinkedList{
 public:
     Node<T> *head = new Node<T>;
     LinkedList(){
-        //head = 0;
+        head = 0;
     }
     LinkedList(T data){
         head -> value = data;      
@@ -51,6 +51,14 @@ public:
             delete p;
         }    
     }
+    bool empty(){
+        if(head != 0){
+          return true;  
+        }
+        else{
+            return false;
+        }
+    }
 
     void print(){
         Node<T> *new_var = head;
@@ -63,18 +71,14 @@ public:
 
 int main(void){
 
-    LinkedList<int> list(10);
-    list.push_back(20);
-    list.push_back(21);
+    LinkedList<int> list;
     list.push_front(22);
     list.push_back(21);
     list.print();
     std::cout<<std::endl;
-    list.del_index(1);
+    list.del_index(0); 
     list.print();
-    std::cout<<std::endl;
-    list.push_back(0);
-    list.print();
+    std::cout<< list.empty()<<std::endl;
 
     return 0;
 }
