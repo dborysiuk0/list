@@ -59,6 +59,16 @@ public:
             return false;
         }
     }
+    int size(){
+        int amount=0;
+        Node<T> *new_var = head;
+        while( new_var != 0 ){
+            new_var = new_var -> next;
+            amount++;
+        }
+        delete new_var;
+        return amount;
+    }
 
     void print(){
         Node<T> *new_var = head;
@@ -74,11 +84,14 @@ int main(void){
     LinkedList<int> list;
     list.push_front(22);
     list.push_back(21);
+    list.push_back(22);
+    list.push_back(23);
     list.print();
     std::cout<<std::endl;
     list.del_index(0); 
     list.print();
     std::cout<< list.empty()<<std::endl;
+    std::cout<< list.size()<<std::endl;
 
     return 0;
 }
