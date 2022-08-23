@@ -1,0 +1,12 @@
+[
+{
+  "directory": "C:/Users/user/Desktop/list/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\list.dir\\main.cpp.obj -c C:\\Users\\user\\Desktop\\list\\main.cpp",
+  "file": "C:/Users/user/Desktop/list/main.cpp"
+},
+{
+  "directory": "C:/Users/user/Desktop/list/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\list.dir\\LinkedList.cpp.obj -c C:\\Users\\user\\Desktop\\list\\LinkedList.cpp",
+  "file": "C:/Users/user/Desktop/list/LinkedList.cpp"
+}
+]
