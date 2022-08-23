@@ -32,11 +32,34 @@ public:
         new_var -> next = head;
         head = new_var;
     }
+    int size(){
+        int amount=0;
+        Node<T> *new_var = head;
+        while( new_var != 0 ){
+            new_var = new_var -> next;
+            amount++;
+        }
+        delete new_var;
+        return amount;
+    }
     void del_index(int index){
         if(index == 0){
             Node<T> *new_head = head ->next;
             delete head;
             head = new_head;
+        }
+        else if(index == size()){
+            Node<T> *ptr = head;
+            int i=0;
+            while ((i+1) != index)
+            {
+                ptr = ptr -> next;
+            }
+            delete ptr -> next;
+        }
+        else if(index > size()){
+            std::cout<<"This index does not exist in the list"<<std::endl;
+            return;
         }
         else{
             Node<T> *ptr = head;
@@ -45,6 +68,7 @@ public:
             while ((i+1) != index)
             {
                 ptr = ptr -> next;
+                i++;
             }
             p = ptr -> next;
             ptr ->next = ptr -> next -> next;
@@ -59,16 +83,6 @@ public:
             return false;
         }
     }
-    int size(){
-        int amount=0;
-        Node<T> *new_var = head;
-        while( new_var != 0 ){
-            new_var = new_var -> next;
-            amount++;
-        }
-        delete new_var;
-        return amount;
-    }
 
     void print(){
         Node<T> *new_var = head;
@@ -76,6 +90,7 @@ public:
             std::cout << new_var -> value << std::endl;
             new_var = new_var -> next;
         }
+        delete new_var;
     }
 };
 
@@ -88,7 +103,7 @@ int main(void){
     list.push_back(23);
     list.print();
     std::cout<<std::endl;
-    list.del_index(0); 
+    list.del_index(5); 
     list.print();
     std::cout<< list.empty()<<std::endl;
     std::cout<< list.size()<<std::endl;
