@@ -12,7 +12,7 @@ int main(void){
     list.push_back(23);
     list.print();
     std::cout<<std::endl;
-    list.del_index(5); 
+    list.del_index(6); 
     list.print();
     std::cout<< list.empty()<<std::endl;
     std::cout<< list.size()<<std::endl;

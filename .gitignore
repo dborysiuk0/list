@@ -1,0 +1,7 @@
+.vscode/settings.json
+build/list
+build/.cmake/api/v1/reply/index-2022-08-23T14-24-50-0580.json
+build/.cmake/api/v1/reply/index-2022-08-23T14-47-45-0462.json
+build/CMakeFiles/CMakeOutput.log
+build/CMakeFiles/Makefile.cmake
+build/CMakeFiles/list.dir/main.cpp.o
