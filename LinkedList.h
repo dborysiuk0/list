@@ -11,26 +11,31 @@ class Node{
 template<typename T>
 class LinkedList{
 public:
-    Node<T> *head = new Node<T>;
+    Node<T> *head=nullptr;
     // To add an element to an empty list, you need to use a function push_front
-    LinkedList(){
-        head = 0;
+    LinkedList(){      
     }
     // We redefine the constructor to accept the argument
-    LinkedList(T data){
+    explicit LinkedList(T data){
         head -> value = data;      
     }
         // Check if the list is empty
     bool empty(){
-        if(head != 0){
-          return true;  
+        if(head == 0){
+            return true;  
         }
         else{
             return false;
         }
     }
+    void push_front(T data){
+        Node<T> *new_var = new Node<T>; 
+        new_var -> value = data;
+        new_var -> next = head;
+        head = new_var;
+    }
     void push_back(T data){
-        if(empty()){
+        if(!empty()){
         Node<T> *new_var = head;
         while( new_var != 0 && new_var -> next != 0 ){
             new_var = new_var -> next;
@@ -41,15 +46,9 @@ public:
         }      
         } 
         else{
-            std::cout<<"To add an element to an empty list, you need to use a function push_front"<<std::endl;
+            push_front(data);
             return;
         }
-    }
-    void push_front(T data){
-        Node<T> *new_var = new Node<T>; 
-        new_var -> value = data;
-        new_var -> next = head;
-        head = new_var;
     }
     // We count how many Node elements are in the list
     int size(){
