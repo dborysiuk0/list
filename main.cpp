@@ -3,7 +3,7 @@
 
 int main(void){
 
-    LinkedList<int> list;
+    LinkedList<int> list(10);
     std::cout<< list.empty()<<std::endl;
     list.push_back(21);
     list.push_front(22);
