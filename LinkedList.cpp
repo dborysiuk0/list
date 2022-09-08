@@ -3,7 +3,7 @@
 
     // Check if the list is empty
     template<typename T>
-    bool LinkedList::empty(){
+    bool LinkedList<T>::empty(){
         if(head == 0){
             return true;  
         }
@@ -12,14 +12,14 @@
         }
     }
     template<typename T>
-    void LinkedList::push_front(T data){
+    void LinkedList<T>::push_front(T data){
         Node<T> *new_var = new Node<T>; 
         new_var -> value = data;
         new_var -> next = head;
         head = new_var;
     }
     template<typename T>
-    void LinkedList::push_back(T data){
+    void LinkedList<T>::push_back(T data){
         if(!empty()){
         Node<T> *new_var = head;
         while( new_var != 0 && new_var -> next != 0 ){
@@ -38,7 +38,7 @@
 
     // We count how many Node elements are in the list
     template<typename T>
-    int LinkedList::size(){
+    int LinkedList<T>::size(){
         int amount=0;
         Node<T> *new_var = head;
         while( new_var != 0 ){
@@ -51,7 +51,7 @@
     // We check which element we are deleting, if it is the first one, then it is necessary to move the head. 
     // We check the correctness of the index.
     template<typename T>
-    void LinkedList::del_index(int index){
+    void LinkedList<T>::del_index(int index){
         if(index == 0){
             Node<T> *new_head = head ->next;
             delete head;
@@ -86,7 +86,7 @@
     }
     // Output of each element to the std::cout stream
     template<typename T>
-    void LinkedList::print(){
+    void LinkedList<T>::print(){
         Node<T> *new_var = head;
         while( new_var != 0 ){
             std::cout << new_var -> value << std::endl;
