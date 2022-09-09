@@ -14,8 +14,8 @@ public:
     Node<T> *head = new Node<T>;
     // To add an element to an empty list, you need to use a function push_front
     LinkedList(){
-        head = 0;
-    }
+        head = nullptr;
+     }
     // We redefine the constructor to accept the argument
     LinkedList(T data){
         head -> value = data;      
@@ -29,6 +29,12 @@ public:
             return false;
         }
     }
+    void push_front(T data){
+        Node<T> *new_var = new Node<T>; 
+        new_var -> value = data;
+        new_var -> next = head;
+        head = new_var;
+    }
     void push_back(T data){
         if(empty()){
         Node<T> *new_var = head;
@@ -41,15 +47,9 @@ public:
         }      
         } 
         else{
-            std::cout<<"To add an element to an empty list, you need to use a function push_front"<<std::endl;
+            push_front(data);
             return;
         }
-    }
-    void push_front(T data){
-        Node<T> *new_var = new Node<T>; 
-        new_var -> value = data;
-        new_var -> next = head;
-        head = new_var;
     }
     // We count how many Node elements are in the list
     int size(){
