@@ -15,8 +15,8 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 enable_testing()
-add_executable(tests LinkedList.cpp googletest/gtests.cpp)
+add_executable(tests googletest/gtests.cpp)
 target_link_libraries(tests gtest_main gmock)
 add_test(NAME tests COMMAND tests) 
 
-add_executable(list main.cpp LinkedList.cpp)
+add_executable(list main.cpp)
