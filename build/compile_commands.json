@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/user/list_project/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++14 -o CMakeFiles/list.dir/main.cpp.o -c /home/user/list_project/main.cpp",
+  "file": "/home/user/list_project/main.cpp"
+},
+{
+  "directory": "/home/user/list_project/build",
+  "command": "/usr/bin/g++   -isystem /home/user/list_project/build/_deps/googletest-src/googletest/include -isystem /home/user/list_project/build/_deps/googletest-src/googletest -isystem /home/user/list_project/build/_deps/googletest-src/googlemock/include -isystem /home/user/list_project/build/_deps/googletest-src/googlemock  -g   -std=gnu++14 -o CMakeFiles/tests.dir/googletest/gtests.cpp.o -c /home/user/list_project/googletest/gtests.cpp",
+  "file": "/home/user/list_project/googletest/gtests.cpp"
+},
+{
+  "directory": "/home/user/list_project/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/g++   -isystem /home/user/list_project/build/_deps/googletest-src/googlemock/include -isystem /home/user/list_project/build/_deps/googletest-src/googlemock -isystem /home/user/list_project/build/_deps/googletest-src/googletest/include -isystem /home/user/list_project/build/_deps/googletest-src/googletest  -g   -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14 -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/user/list_project/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/home/user/list_project/build/_deps/googletest-src/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/home/user/list_project/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/g++   -I/home/user/list_project/build/_deps/googletest-src/googlemock/include -I/home/user/list_project/build/_deps/googletest-src/googlemock -isystem /home/user/list_project/build/_deps/googletest-src/googletest/include -isystem /home/user/list_project/build/_deps/googletest-src/googletest  -g   -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14 -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/user/list_project/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/home/user/list_project/build/_deps/googletest-src/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/home/user/list_project/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/g++   -isystem /home/user/list_project/build/_deps/googletest-src/googletest/include -isystem /home/user/list_project/build/_deps/googletest-src/googletest  -g   -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14 -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/user/list_project/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/home/user/list_project/build/_deps/googletest-src/googletest/src/gtest_main.cc"
+},
+{
+  "directory": "/home/user/list_project/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/g++   -I/home/user/list_project/build/_deps/googletest-src/googletest/include -I/home/user/list_project/build/_deps/googletest-src/googletest  -g   -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/user/list_project/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/home/user/list_project/build/_deps/googletest-src/googletest/src/gtest-all.cc"
+}
+]
