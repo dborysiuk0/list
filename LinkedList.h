@@ -11,13 +11,13 @@ class Node{
 template<typename T>
 class LinkedList{
 public:
-    Node<T> *head = new Node<T>;
+    Node<T> *head = nullptr;
     // To add an element to an empty list, you need to use a function push_front
-    LinkedList(){
-        head = 0;
-    }
+    LinkedList() = default;
     // We redefine the constructor to accept the argument
-    LinkedList(T data){
+    LinkedList(T data) 
+    :head(new Node<T>)
+    {
         head -> value = data;      
     }
         // Check if the list is empty
@@ -28,6 +28,12 @@ public:
         else{
             return false;
         }
+    }
+    void push_front(T data){
+        Node<T> *new_var = new Node<T>; 
+        new_var -> value = data;
+        new_var -> next = head;
+        head = new_var;
     }
     void push_back(T data){
         if(empty()){
@@ -41,25 +47,19 @@ public:
         }      
         } 
         else{
-            std::cout<<"To add an element to an empty list, you need to use a function push_front"<<std::endl;
+            push_front(data);
             return;
         }
     }
-    void push_front(T data){
-        Node<T> *new_var = new Node<T>; 
-        new_var -> value = data;
-        new_var -> next = head;
-        head = new_var;
-    }
     // We count how many Node elements are in the list
-    int size(){
+    int size() const
+    {
         int amount=0;
         Node<T> *new_var = head;
         while( new_var != 0 ){
             new_var = new_var -> next;
             amount++;
         }
-        delete new_var;
         return amount;
     }
     // We check which element we are deleting, if it is the first one, then it is necessary to move the head. 
@@ -70,16 +70,7 @@ public:
             delete head;
             head = new_head;
         }
-        else if(index == size()){
-            Node<T> *ptr = head;
-            int i=0;
-            while ((i+1) != index)
-            {
-                ptr = ptr -> next;
-            }
-            delete ptr -> next;
-        }
-        else if(index > size()){
+        else if(index > size()-1){
             std::cout<<"This index does not exist in the list"<<std::endl;
             return;
         }
@@ -98,7 +89,8 @@ public:
         }    
     }
     // Output of each element to the std::cout stream
-    void print(){
+    void print() const
+    {
         Node<T> *new_var = head;
         while( new_var != 0 ){
             std::cout << new_var -> value << std::endl;
