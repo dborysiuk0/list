@@ -33,4 +33,8 @@ TEST(myfunc, func_4){
     
     EXPECT_EQ(list.empty(), 0);
 }
-// add more tests
+TEST(myfunc, func_5){
+    LinkedList<int> list(10);
+    
+    EXPECT_EQ(list.empty(), 0);
+}

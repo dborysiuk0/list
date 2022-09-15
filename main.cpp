@@ -13,10 +13,5 @@ int main(void){
      std::cout<<std::endl;
     list.del_index(2); 
     list.print();
-
-    //add test unit 
-    //add google test framework
-    //add test verify creating Node in empty list
-    // view log file 
     return 0;
 }
